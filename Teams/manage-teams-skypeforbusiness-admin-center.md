@@ -61,8 +61,14 @@ The following table identifies the sections of the Teams experience that have be
 |Messaging     |Allow users to edit their own messages         |[TeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy?view=skype-ps)         |User         |
 |Messaging     |Allow users to delete their own messages         |[TeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy?view=skype-ps)         |User         |
 |Messaging     |Allows users to chat privately         |[TeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy?view=skype-ps)         |User         |
+|Apps     |Default Apps*<sup>1</sup>         |[Org wide app settings]         |Tenant         |
+|Apps     |Allow external apps      |[Org wide app settings]         |Tenant         |
+|Apps     |Enable new external apps by default   |[Org wide App Settings]         |Tenant         |
+|Apps     |Allow sideloading of external apps     |[TeamsAppSetupPolicy]         |User         |
 
 <sup>1</sup> Deprecated for Guest. Enabling/disabling Guest can now be managed in the Microsoft Teams admin center. Enabling/disabling Teams for Business Enterprise, Edu Student, and Edu Faculty will be deprecated soon. This should be managed by assigning licenses in the Office 365 admin center. See [Manage user access to Microsoft Teams](user-access.md).
+
+<sup>2</sup> The existing tenant level configurations for default apps would be migrated to org wide settings, but admins can leverage the TeamsAppPermissionPolicy to manage enable/disable of apps at a user level
 
 > [!NOTE]
 > You’ll continue to use the Groups dashboard in the Office 365 admin center for configuration related to Teams and channels. Settings for Apps will remain in the Teams area of the Office 365 admin center and will be migrated later. 
